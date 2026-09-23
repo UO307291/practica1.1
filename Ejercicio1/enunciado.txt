@@ -1,0 +1,22 @@
+Escribe un servidor UDP que escuche en el puerto que se le indique por línea de comandos,
+o en el 9999 por defecto si el usuario no lo especifica por línea de comandos.
+El servidor estará en un bucle infinito en el que, para cada datagrama que llegue,
+imprimirá en pantalla el contenido del datagrama y la dirección de la cual proviene.
+Guárdalo como udp_servidor1.py
+
+Antes de escribir un cliente para el servidor anterior, puedes probar si funciona haciendo
+uso del comando netcat de la siguiente forma:
+
+$ nc -u 9999
+
+Donde 9999 sería el puerto en que escucha el servidor. Este comando queda a la espera de
+que escribas algo y pulses intro, y en ese momento se lo enviará al servidor, el cual si
+funciona correctamente deberá mostrar en pantalla lo que has escrito y la dirección de origen
+del datagrama. Puedes probar a ejecutar el servidor en una terminal y el cliente en otra.
+
+Escribe un cliente UDP que, en un bucle, lea una línea de texto del teclado y se la envíe
+en un datagrama al servidor anterior, hasta que la línea leída sea FIN. El cliente
+recibirá por línea de comandos la IP y puerto del servidor, o asumirá como valores por
+defecto "localhost" y 9999. Guárdalo como udp_cliente1.py
+
+Prueba a ejecutar el servidor en una terminal y el cliente en otra.
