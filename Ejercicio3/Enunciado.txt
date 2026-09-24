@@ -1,0 +1,13 @@
+Crea una copia del servidor anterior en udp_servidor3_con_ok.py.
+Modifica el servidor para que, en caso de que decida no perder el
+paquete, además de mostrarlo por pantalla envíe al cliente otro
+datagrama conteniendo el texto "OK".
+
+Crea una copia del cliente del Ejercicio 2 y guárdalo con el nombre
+udp_cliente3_espera_ok.py para que tras cada datagrama enviado espere
+la confirmación, pero limitando el tiempo de espera como se mostró
+en el código anterior.
+
+Ejecuta los nuevos programas de cliente y servidor y comprueba cómo
+cuando el servidor "decide" simular la pérdida de un paquete, el cliente
+detecta correctamente la no recepción del datagrama.

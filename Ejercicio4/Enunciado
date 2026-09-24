@@ -1,0 +1,16 @@
+Modifica el cliente anterior en un nuevo fichero udp_cliente4_reintenta.py
+de modo que, en caso de agotar el tiempo de espera (timeout), el cliente
+repita el envío, duplicando en cada reenvío el valor del timeout hasta
+que se reciba el "OK", o que el timeout exceda el valor de 2 segundos.
+En el primer caso, volverá a enviar el datagrama al servidor usando el
+mismo esquema. En el segundo caso, imprimirá un mensaje "Puede que el
+servidor esté caído. Inténtelo más tarde" y finalizará su ejecución.
+Observa que en los reintentos el número de secuencia del datagrama no se
+debe incrementar.
+
+Ejecuta el nuevo cliente junto con el servidor anterior,
+udp_servidor3_con_ok.py y comprueba que funciona como se espera.
+
+Ejecuta, también, el cliente pero ahora usando como IP y puerto valores
+en los que no haya ningún servidor escuchando. Comprueba cómo detecta
+correctamente el problema (tras varios reintentos) y termina su ejecución.

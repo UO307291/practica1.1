@@ -1,0 +1,18 @@
+Crea una copia del servidor anterior en udp_servidor2_simula_perdidas.py
+y modifícalo para que, tras recibir el datagrama, decida aleatoriamente
+con una probabilidad del 50% si simulará no haberlo recibido. En este
+caso imprimirá en pantalla "Simulando paquete perdido", y en otro caso
+imprimirá en pantalla el contenido del datagrama tal como hacía antes.
+Para generar números aleatorios puedes usar el módulo random, mediante
+la función randint() que incluye este módulo.
+
+Crea una copia del cliente anterior en udp_cliente2_numera_mensajes.py
+y modifícalo para que añada al principio de cada datagrama un número
+(su representación como string) que vaya incrementándose por cada
+datagrama enviado. Así, por ejemplo, si el usuario escribe "Hola", el
+datagrama enviado será "1: Hola" y el "1" se irá incrementando para
+sucesivos datagramas.
+
+Ejecuta el servidor y el cliente. Comprueba cómo algunos de los
+datagramas se pierden y por tanto la secuencia de números que muestra
+el servidor tiene saltos.
